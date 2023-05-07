@@ -10,3 +10,6 @@
 
 ## DB:
 - postgresql
+
+## Application URL:
+http://localhost:8080/ProductInventoryApplication/ProductControllerServlet
