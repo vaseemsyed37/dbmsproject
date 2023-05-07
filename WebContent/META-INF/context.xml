@@ -1,0 +1,10 @@
+<Context>
+
+  <Resource name="jdbc/inventory" 
+  			auth="Container" type="javax.sql.DataSource"
+               maxActive="20" maxIdle="5" maxWait="10000"
+               username="postgres" password="Sarath_1990" 
+               driverClassName="org.postgresql.Driver"
+               url="jdbc:postgresql://localhost:5432/postgres?useSSL=false&amp;serverTimezone=UTC"/>
+
+</Context>
