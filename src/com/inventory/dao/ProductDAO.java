@@ -240,6 +240,20 @@ public class ProductDAO {
 
 				// execute SQL statement
 				myStmt.execute();
+				
+				// create SQL update statement
+				sql = "update stock " + "set dep=?, quantity=?" + " where prod=?";
+
+				// prepare statement
+				myStmt = myConn.prepareStatement(sql);
+
+				// set params
+				myStmt.setString(1, theProduct.getStock().getDep());
+				myStmt.setInt(2, Integer.valueOf(theProduct.getStock().getQuantity()));
+				myStmt.setString(3, theProduct.getStock().getProd());
+
+				// execute SQL statement
+				myStmt.execute();
 			}
 			
 			// Commit the transaction For atomocity, consistency, durability
